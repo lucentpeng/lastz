@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>峽谷衝突指示 - Last War Z</title>
+  <style>
+    body {
+      font-family: "Noto Sans", "Segoe UI", sans-serif;
+      margin: 1em auto;
+      max-width: 900px;
+      padding: 0 1em;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #1a73e8;
+      margin-bottom: 0.2em;
+    }
+    .version {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      margin-bottom: 1em;
+    }
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 1em;
+    }
+    .lang-switch button {
+      padding: 6px 12px;
+      margin-left: 8px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      background-color: #1a73e8;
+      color: white;
+      cursor: pointer;
+    }
+    .lang-switch button:hover {
+      background-color: #155ab6;
+    }
+    h2 {
+      color: #1a73e8;
+      border-bottom: 2px solid #1a73e8;
+      padding-bottom: 5px;
+      margin-top: 2em;
+    }
+    .section {
+      background: #fff;
+      padding: 1.2em;
+      margin-bottom: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    ul, ol {
+      padding-left: 1.2em;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 0 0.8em;
+      }
+      .lang-switch {
+        text-align: center;
+      }
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+      document.getElementById(lang).style.display = 'block';
+    }
+
+    window.onload = () => {
+      const lang = navigator.language || navigator.userLanguage;
+      if (lang.startsWith('zh-TW') || lang.startsWith('zh-HK')) {
+        switchLang('zh');
+      } else if (lang.startsWith('zh-CN')) {
+        switchLang('zh'); // 目前沒簡體版，暫時導向繁中
+      } else {
+        switchLang('en');
+      }
+    };
+  </script>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <button onclick="switchLang('zh')">中文</button>
+    <button onclick="switchLang('en')">English</button>
+  </div>
+
+  <h1>Last War Z 峽谷衝突指示</h1>
+  <div class="version">版本：v0.1</div>
+
+  <!-- 中文版 -->
+  <div id="zh" class="lang">
+    <div class="section">
+      <h2>戰鬥前準備</h2>
+      <ul>
+        <li>請將所有部隊召回，並確保醫院無任何傷兵，才能順利進入戰場。</li>
+        <li>峽谷戰不會死兵、不會被搶資源，請大家安心進行戰鬥。</li>
+        <li>活動中心右側「峽谷爭奪戰」內有詳細規則與地圖，建議事前閱讀。</li>
+        <li>遷城功能可無限使用（僅限時間內），請靈活運用，快速接近資源建築或安全區。</li>
+        <li><strong>若遭遇異常狀況，請將應用程式結束並重新啟動，通常可解決問題。</strong></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>戰鬥指示</h2>
+      <p><strong>主堡等級 &lt; 23：</strong></p>
+      <ul>
+        <li>比賽開始時，立即佔領礦場、淨水廠與醫療所。</li>
+        <li>若遭攻擊無法守住，請立即分享位置。</li>
+        <li>軍事設施出現後也需盡快佔領，建築物可多人佔領以增加防禦力（優先於礦）。</li>
+        <li>三隊皆可派出：<strong>主力隊守建築，其他隊採礦</strong>。</li>
+      </ul>
+
+      <p><strong>主堡等級 ≥ 23：</strong></p>
+      <ul>
+        <li>優先目標是<strong>打下已被佔領的建築物</strong>（地圖右下角標紅）。</li>
+        <li><strong>Justfun 負責搶奪能源核心</strong>，能源核心會於比賽開始後 20 分鐘與 30 分鐘出現。</li>
+        <li>請 23 級以上成員協助掩護。</li>
+        <li>若發現高等級（27級）對手，或自己無法應對時，請立即分享位置。</li>
+      </ul>
+
+      <p>剩餘狀況請大家在戰場上靈活應變。</p>
+    </div>
+
+    <div class="section">
+      <h2>補充注意事項</h2>
+      <ol>
+        <li>今日指揮官為 <strong>Justfun 指揮官</strong>。</li>
+        <li>峽谷戰目標是佔領資源與建築物，<strong>佔領時間越久分數越高</strong>。</li>
+        <li><strong>戰場右上角還有一隻巨型喪屍，擊倒可增加全隊攻擊力，牠會不定期出現。</strong></li>
+        <li>比賽開始 20、30 分鐘會出現 <strong>能源核心</strong>，需搶下並帶回安全區。</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- 英文版 -->
+  <div id="en" class="lang" style="display:none;">
+    <div class="section">
+      <h2>Pre-Battle Preparation</h2>
+      <ul>
+        <li>Recall all troops and ensure no wounded soldiers in your hospital to enter the battlefield.</li>
+        <li>No troops will die or resources stolen in Canyon War — feel free to go all-in.</li>
+        <li>Check the “Canyon Clash” tab in the Event Center (right side) for rules and the map.</li>
+        <li>Teleport is unlimited during the event period — use it to move close to buildings or safe zones.</li>
+        <li><strong>If you experience glitches, force close and reopen the app to fix the issue.</strong></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Battle Instructions</h2>
+      <p><strong>Main Base Level &lt; 23:</strong></p>
+      <ul>
+        <li>At match start, immediately occupy mines, water plants, and medical stations.</li>
+        <li>If under attack and cannot defend, share your location right away.</li>
+        <li>Occupy military buildings when they appear. Multiple players can defend one building. Prioritize buildings over mines.</li>
+        <li>Deploy all 3 teams: <strong>Main team defends buildings, others mine resources</strong>.</li>
+      </ul>
+
+      <p><strong>Main Base Level ≥ 23:</strong></p>
+      <ul>
+        <li>Focus on <strong>capturing already-occupied buildings</strong> (marked red on the lower-right map).</li>
+        <li><strong>Justfun will secure the Energy Core</strong>, appearing at 20 and 30 minutes.</li>
+        <li>Level 23+ teammates, please support and cover.</li>
+        <li>If you find strong enemies (Lv. 27) or need help, share your location for backup.</li>
+      </ul>
+
+      <p>Other actions will need to be decided based on real-time battlefield conditions.</p>
+    </div>
+
+    <div class="section">
+      <h2>Additional Notes</h2>
+      <ol>
+        <li><strong>Justfun</strong> is today’s commander.</li>
+        <li>Occupy buildings and resources — the longer you hold them, the more points you earn.</li>
+        <li><strong>A giant zombie appears at the top-right. Defeating it grants team-wide attack bonus. Appears randomly.</strong></li>
+        <li>Energy Cores appear at 20 and 30 mins. Capture them and return to the safe zone.</li>
+      </ol>
+    </div>
+  </div>
+
+</body>
+</html>
